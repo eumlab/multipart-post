@@ -69,7 +69,7 @@ module Parts
       part = ''
       part << "--#{boundary}\r\n"
       part << "Content-Disposition: #{content_disposition}; name=\"#{name.to_s}\"; filename=\"#{filename}\"\r\n"
-      part << "Content-Length: #{content_len}\r\n"
+      #part << "Content-Length: #{content_len}\r\n"
       if content_id = opts["Content-ID"]
         part << "Content-ID: #{content_id}\r\n"
       end
@@ -80,7 +80,7 @@ module Parts
         part << "Content-Type: #{type}\r\n"
       end
 
-      part << "Content-Transfer-Encoding: #{trans_encoding}\r\n"
+      #part << "Content-Transfer-Encoding: #{trans_encoding}\r\n"
       part << "\r\n"
     end
   end
